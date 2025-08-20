@@ -1,4 +1,4 @@
-# Project Summary: Company Internal Financial Analytics Tool
+# Company Internal Financial Analytics Tool
 
 This project implements a Python-based tool for analyzing internal company financial data using natural language queries. It demonstrates skills in data processing with PySpark, natural language processing, data visualization, and basic machine learning concepts.
 
