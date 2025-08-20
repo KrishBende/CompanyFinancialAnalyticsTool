@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Results - Company Financial Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Query Results</h1>
+            <p>AI-powered financial data analysis</p>
+        </header>
+        
+        <div class="back-link">
+            <a href="/">← Back to Query Interface</a>
+        </div>
+        
+        <div class="query-display">
+            <h2>Executed Query</h2>
+            <div class="query-text">"{{ query }}"</div>
+        </div>
+        
+        <div class="results-section">
+            <h2>Analysis Output</h2>
+            <div class="output-content">{{ output }}</div>
+        </div>
+        
+        <div class="results-section">
+            <h2>Visualizations</h2>
+            {% if chart_files %}
+                <div class="charts-grid">
+                    {% for chart in chart_files %}
+                    <div class="chart-container">
+                        <div class="chart-title">{{ chart.replace('_', ' ').replace('.png', '').title() }}</div>
+                        <img src="/charts/{{ chart }}" alt="{{ chart.replace('_', ' ').replace('.png', '').title() }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="no-results">
+                    <h3>No Visualizations Generated</h3>
+                    <p>This might be because:</p>
+                    <p>• The query didn't request a visualization</p>
+                    <p>• There was an error processing the query</p>
+                    <p>• The query result doesn't lend itself to charting</p>
+                    <p>• The visualization feature needs debugging</p>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="footer">
+            <p>Company Internal Financial Analytics Tool &copy; 2025</p>
+        </div>
+    </div>
+</body>
+</html>

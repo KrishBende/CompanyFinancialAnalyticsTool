@@ -1,3 +1,6 @@
+# This file is deprecated in favor of advanced_nlp_ml.py which uses spaCy
+# Keeping it for reference or fallback purposes
+
 import re
 from datetime import datetime
 

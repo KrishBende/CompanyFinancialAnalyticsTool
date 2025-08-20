@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Financial Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Company Internal Financial Analytics</h1>
+            <p class="subtitle">Enter natural language queries to analyze financial data with AI-powered insights</p>
+        </header>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Data Visualization</h3>
+                <p>Automatic chart generation for all your financial queries</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>NLP Processing</h3>
+                <p>Natural language understanding for complex queries</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔮</div>
+                <h3>Predictive Analytics</h3>
+                <p>Forecast future trends with machine learning</p>
+            </div>
+        </div>
+        
+        <div class="query-section">
+            <form action="/query" method="post">
+                <div class="query-form">
+                    <input type="text" name="query" placeholder="e.g., Show me total sales by category" required id="query-input">
+                    <button type="submit" id="submit-btn">Analyze Data</button>
+                </div>
+            </form>
+            
+            <div class="examples">
+                <h2>Example Queries</h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <h3>Sales Analysis</h3>
+                        <p>Show me total sales by category</p>
+                    </div>
+                    <div class="example-card">
+                        <h3>Trend Analysis</h3>
+                        <p>Plot the trend of profit over time</p>
+                    </div>
+                    <div class="example-card">
+                        <h3>Average Metrics</h3>
+                        <p>What is the average discount by segment?</p>
+                    </div>
+                    <div class="example-card">
+                        <h3>Predictive Analytics</h3>
+                        <p>Predict sales for next year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Company Internal Financial Analytics Tool &copy; 2025</p>
+        </div>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
